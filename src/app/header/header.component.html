@@ -1,0 +1,22 @@
+<div class="app-header">
+    <!--APP LOGO-->
+    <div class="app-header-logo">
+        <h2 style="font-family: 'Arial', sans-serif; color: #333;">Task Management</h2>
+    </div>
+
+    <!--APP NAVBAR-->
+    <div class="app-header-navbar">
+        <a routerLink="/" style="margin-right: 20px; text-decoration: none; color: #333;">
+            <i class="fas fa-home"></i> HOME
+        </a>
+        <a routerLink="/dashboard" *ngIf="isLoggedIn" style="margin-right: 20px; text-decoration: none; color: #333;">
+            <i class="fas fa-tachometer-alt"></i> DASHBOARD
+        </a>
+        <a routerLink="/login" *ngIf="!isLoggedIn" style="margin-right: 20px; text-decoration: none; color: #333;">
+            <i class="fas fa-sign-in-alt"></i> LOGIN
+        </a>
+        <a *ngIf="isLoggedIn" (click)="onLogOut()" style="margin-right: 20px; text-decoration: none; color: #333;">
+            <i class="fas fa-sign-out-alt"></i> LOGOUT
+        </a>
+    </div>
+</div>
